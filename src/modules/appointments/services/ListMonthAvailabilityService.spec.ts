@@ -8,7 +8,9 @@ let listMonthAvailability: ListMonthAvailabilityService;
 describe('listMonthAvailability', () => {
   beforeEach(() => {
     fakeAppointmentsRepository = new FakeAppointmentsRepository();
-    listMonthAvailability = new ListMonthAvailabilityService();
+    listMonthAvailability = new ListMonthAvailabilityService(
+      fakeAppointmentsRepository,
+    );
   });
   it('should be able to list the month availability', async () => {
     await fakeAppointmentsRepository.create({
