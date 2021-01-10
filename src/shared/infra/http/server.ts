@@ -1,4 +1,5 @@
 import 'reflect-metadata';
+import 'dotenv/config';
 import express, { Request, Response, NextFunction, response } from 'express';
 import 'express-async-errors';
 import cors from 'cors';
