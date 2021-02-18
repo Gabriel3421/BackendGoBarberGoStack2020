@@ -21,6 +21,8 @@ app.use(routes);
 app.use(errors());
 
 app.use((err: Error, req: Request, res: Response, _: NextFunction) => {
+  console.log('aki');
+
   if (err instanceof AppError) {
     return response.status(err.statusCode).json({
       status: 'error',

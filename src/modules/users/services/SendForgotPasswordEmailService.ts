@@ -29,7 +29,7 @@ class SendForgotPasswordEmailService {
     const forgotPasswordTemplate = path.resolve(
       __dirname,
       '..',
-      'view',
+      'views',
       'forgot_password.hbs',
     );
     await this.mailProvider.sendMail({
